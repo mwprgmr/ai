@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #f7f8f6;
+  --foreground: #101411;
+  --muted: #66706a;
+  --panel: #ffffff;
+  --border: #dce2dd;
+  --accent: #168a4a;
+  --accent-strong: #0d6536;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #0d100e;
+  --foreground: #eef4ef;
+  --muted: #9aa69e;
+  --panel: #151916;
+  --border: #29332d;
+  --accent: #37c878;
+  --accent-strong: #7be2a7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+.prose-chat {
+  line-height: 1.7;
+}
+
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  margin: 1rem 0 0.45rem;
+  font-weight: 700;
+}
+
+.prose-chat p,
+.prose-chat ul,
+.prose-chat ol,
+.prose-chat table,
+.prose-chat pre {
+  margin: 0.75rem 0;
+}
+
+.prose-chat ul,
+.prose-chat ol {
+  padding-inline-start: 1.35rem;
+}
+
+.prose-chat a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.prose-chat table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.prose-chat th,
+.prose-chat td {
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  text-align: start;
+}
+
+.prose-chat code {
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  padding: 0.1rem 0.28rem;
+}
+
+.prose-chat pre {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--foreground) 7%, transparent);
+  padding: 0.85rem;
+}
+
+.prose-chat pre code {
+  background: transparent;
+  padding: 0;
+}
